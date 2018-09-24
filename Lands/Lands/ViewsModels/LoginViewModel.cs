@@ -7,10 +7,12 @@ namespace Lands.ViewsModels
     using System.ComponentModel;
     using System.Windows.Input;
     using Xamarin.Forms;
+    using Views;
 
     class LoginViewModel : BaseViewModel
     {
         #region Attributes
+        private string email;
         private string password;
         private bool isRunning;
         private bool isEnabled;
@@ -19,8 +21,8 @@ namespace Lands.ViewsModels
         #region Properties
         public string Email
         {
-            get;
-            set;
+            get { return this.email; }
+            set { SetValue(ref this.email, value); }
         }
 
         public string Password
@@ -104,12 +106,11 @@ namespace Lands.ViewsModels
             }
             this.IsRunning = false;
             this.isEnabled = true;
-            await Application.Current.MainPage.DisplayAlert(
-                   "Ok",
-                   "una chimba",
-                   "Accept"
-                   );
-            return;
+
+            this.Email = string.Empty;
+            this.password = string.Empty;
+
+            await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
         }
         #endregion
     }
