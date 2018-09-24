@@ -14,6 +14,7 @@
                 WidthRequest="200">
                 </Image>
                 <Grid
+                    VerticalOptions="CenterAndExpand"
                     Margin="10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -44,11 +45,13 @@
                     Placeholder="Enter your password...">
                     </Entry>
                 </Grid>
-                <ActivityIndicator>
+                <ActivityIndicator
+                    VerticalOptions="CenterAndExpand">
                 </ActivityIndicator>
                 <StackLayout
                     Margin="10,0"
-                    Orientation="Horizontal">
+                    Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand">
                     <Label 
                     HorizontalOptions="StartAndExpand"
                     Text="Rememberme on this device"
@@ -61,11 +64,13 @@
                 <Label
                     HorizontalOptions="Center"
                     Text="Forgot your password?"
+                    VerticalOptions="CenterAndExpand"
                     TextColor="Blue">
                 </Label>
                 <StackLayout
                     Margin="40,0"
-                    Orientation="Horizontal">
+                    Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand">
                     <Button
                         BorderRadius="23"
                         HeightRequest="46"
@@ -84,19 +89,20 @@
                     </Button>
                 </StackLayout>
                 <StackLayout
-                HorizontalOptions="Center"
-                Orientation="Horizontal">
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal"
+                    VerticalOptions="EndAndExpand">
                     <Image
-                    Source="facebook_logo"
-                    WidthRequest="100">
+                        Source="facebook_logo"
+                        WidthRequest="100">
                     </Image>
                     <Image
-                    Source="twitter_logo"
-                    WidthRequest="78">
+                        Source="twitter_logo"
+                        WidthRequest="78">
                     </Image>
                     <Image
-                    Source="instagram_logo"
-                    WidthRequest="78">
+                        Source="instagram_logo"
+                        WidthRequest="78">
                     </Image>
                 </StackLayout>
             </StackLayout>
