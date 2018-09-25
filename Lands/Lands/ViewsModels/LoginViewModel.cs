@@ -54,8 +54,9 @@ namespace Lands.ViewsModels
         public LoginViewModel()
         {
             this.IsRemembered = true;
-            this.isEnabled = true;
-
+            this.IsEnabled = true;
+            this.Email = "andrescadavid4@hotmail.com";
+            this.Password = "123456";
         }
         #endregion
 
@@ -92,7 +93,7 @@ namespace Lands.ViewsModels
             this.IsRunning = true;
             this.isEnabled = false;
 
-            if (this.Email != "andrescadavid4@gmail.com" || this.Password !="123456")
+            if (this.Email != "andrescadavid4@hotmail.com" || this.Password != "123456")
             {
                 this.IsRunning = false;
                 this.isEnabled = true;
@@ -101,15 +102,15 @@ namespace Lands.ViewsModels
                    "Email or Password Incorrect",
                    "Accept"
                    );
-                this.Password = string.Empty;
                 return;
             }
             this.IsRunning = false;
             this.isEnabled = true;
 
             this.Email = string.Empty;
-            this.password = string.Empty;
+            this.Password = string.Empty;
 
+            MainViewModel.GetInstance().Lands = new LandsViewModel(); 
             await Application.Current.MainPage.Navigation.PushAsync(new LandsPage());
         }
         #endregion
