@@ -1,7 +1,7 @@
 ﻿
 namespace Lands.ViewsModels
 {
-    class MainViewModel
+    public class MainViewModel
     {
         #region ViewModels
 
@@ -12,6 +12,12 @@ namespace Lands.ViewsModels
         }
 
         public LandsViewModel Lands
+        {
+            get;
+            set;
+        }
+
+        public LandViewModel Land
         {
             get;
             set;

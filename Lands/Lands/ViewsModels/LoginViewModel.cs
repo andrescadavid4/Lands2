@@ -9,7 +9,7 @@ namespace Lands.ViewsModels
     using Xamarin.Forms;
     using Views;
 
-    class LoginViewModel : BaseViewModel
+    public class LoginViewModel : BaseViewModel
     {
         #region Attributes
         private string email;
