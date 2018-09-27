@@ -21,7 +21,7 @@
         {
             //invocar la Main viewmodel se usa
             MainViewModel.GetInstance().Land = new LandViewModel(this);
-            await Application.Current.MainPage.Navigation.PushAsync(new LandPage());
+            await Application.Current.MainPage.Navigation.PushAsync(new LandTabedPage());
         }
         #endregion
 
