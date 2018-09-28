@@ -13,6 +13,12 @@ namespace Lands.ViewsModels
             get;
             set;
         }
+
+        public TokenResponse Token
+        {
+            get;
+            set;
+        }
         #endregion
 
         #region ViewModels
