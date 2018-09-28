@@ -126,4 +126,7 @@
   <data name="Error" xml:space="preserve">
     <value>Erro</value>
   </data>
+  <data name="PasswordValidation" xml:space="preserve">
+    <value>Você deve digitar uma senha</value>
+  </data>
 </root>

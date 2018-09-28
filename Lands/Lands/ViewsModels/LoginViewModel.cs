@@ -9,7 +9,7 @@ namespace Lands.ViewsModels
     using Xamarin.Forms;
     using Views;
     using Services;
-    using Resources;
+    using Helpers;
 
     public class LoginViewModel : BaseViewModel
     {
@@ -79,9 +79,9 @@ namespace Lands.ViewsModels
             if (string.IsNullOrEmpty(this.Email))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter an email",
-                    "Accept"
+                    Languages.Error,
+                    Languages.EmailValidation,
+                    Languages.Accept
                     );
                 return;
             }
@@ -89,9 +89,9 @@ namespace Lands.ViewsModels
             if (string.IsNullOrEmpty(this.Password))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "You must enter a password",
-                    "Accept"
+                    Languages.Error,
+                    Languages.PasswordValidation,
+                    Languages.Accept
                     );
                 return;
             }
@@ -106,9 +106,9 @@ namespace Lands.ViewsModels
                 this.IsRunning = false;
                 this.isEnabled = true;
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     connection.Message,
-                    "Accept"
+                    Languages.Accept
                     );
                 return;
             }
@@ -124,9 +124,9 @@ namespace Lands.ViewsModels
                 this.IsRunning = false;
                 this.isEnabled = true;
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     "Something was wrong, please try later",
-                    "Accept"
+                    Languages.Accept
                     );
                 return;
             }
@@ -136,9 +136,9 @@ namespace Lands.ViewsModels
                 this.IsRunning = false;
                 this.isEnabled = true;
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
+                    Languages.Error,
                     token.ErrorDescription,
-                    "Accept"
+                    Languages.Accept
                     );
                 this.Password = string.Empty;
                 return;

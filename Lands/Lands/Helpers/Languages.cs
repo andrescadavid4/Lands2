@@ -27,6 +27,11 @@
         {
             get { return Resource.EmailValidation; }
         }
+
+        public static string PasswordValidation
+        {
+            get { return Resource.PasswordValidation; }
+        }
     }
 
 }
