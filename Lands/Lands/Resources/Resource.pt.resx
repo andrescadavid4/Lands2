@@ -120,6 +120,9 @@
   <data name="Accept" xml:space="preserve">
     <value>Aceitar</value>
   </data>
+  <data name="EmailPlaceHolder" xml:space="preserve">
+    <value>Digite seu email...</value>
+  </data>
   <data name="EmailValidation" xml:space="preserve">
     <value>Você deve digitar um email</value>
   </data>
@@ -128,5 +131,8 @@
   </data>
   <data name="PasswordValidation" xml:space="preserve">
     <value>Você deve digitar uma senha</value>
+  </data>
+  <data name="Rememberme" xml:space="preserve">
+    <value>Lembre-se de mim neste dispositivo</value>
   </data>
 </root>
